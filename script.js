@@ -7,16 +7,16 @@ let rotation = 0;
 let spinning = false;
 
 const colors = [
-"#ff7675",
-"#74b9ff",
-"#55efc4",
-"#ffeaa7",
-"#fd79a8",
-"#81ecec",
-"#a29bfe",
-"#fab1a0",
-"#e17055",
-"#00cec9"
+"#a82424",
+"#184d85",
+"#930a8f",
+"#c0cd17",
+"#cf5781",
+"#ac4816",
+"#9b691e",
+"#855e84",
+"#0c125d",
+"#669449"
 ];
 
 function drawWheel(){
