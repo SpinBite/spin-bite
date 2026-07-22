@@ -125,7 +125,13 @@ function removeOption(){
         drawWheel();
     }
 }
+function removeAllOptions(){
+    options = [];
+    drawWheel();
 
+    document.getElementById("winner").innerHTML =
+        "TU RETO SERÁ:";
+}
 function spin(){
 
     if(spinning) return;
