@@ -19,6 +19,31 @@ const colors = [
 "#669449"
 ];
 
+function wrapText(text, maxWidth){
+
+    const words = text.split(" ");
+    const lines = [];
+    let currentLine = "";
+
+    words.forEach(word => {
+
+        const testLine = currentLine ? currentLine + " " + word : word;
+
+        if(ctx.measureText(testLine).width > maxWidth && currentLine){
+            lines.push(currentLine);
+            currentLine = word;
+        } else {
+            currentLine = testLine;
+        }
+    });
+
+    if(currentLine){
+        lines.push(currentLine);
+    }
+
+    return lines;
+}
+
 function drawWheel(){
 
     ctx.clearRect(0,0,500,500);
@@ -59,11 +84,27 @@ ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 ctx.fillStyle = "white";
 ctx.lineWidth = 2;
-ctx.font = "bold 24px Arial";
 
-ctx.strokeText(options[i], 0, 0);
+let fontSize = 28;
+if(options[i].length > 12) fontSize = 22;
+if(options[i].length > 20) fontSize = 18;
+if(options[i].length > 30) fontSize = 15;
 
-ctx.fillText(options[i], 0, 0);
+ctx.font = "bold " + fontSize + "px Arial";
+
+// Ancho disponible según qué tan ancha es la porción a ese radio
+const sliceWidth = 2 * 180 * Math.sin(angle / 2) * 0.9;
+const maxLineWidth = Math.max(sliceWidth, 60);
+
+const lines = wrapText(options[i], maxLineWidth);
+const lineHeight = fontSize + 2;
+const startY = -((lines.length - 1) * lineHeight) / 2;
+
+lines.forEach((line, li) => {
+    const y = startY + li * lineHeight;
+    ctx.strokeText(line, 0, y);
+    ctx.fillText(line, 0, y);
+});
 
 ctx.restore();
     }
