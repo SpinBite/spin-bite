@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruleta Personalizable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <link rel="stylesheet"dy>
+<body>
+
+<div class="header">
+    <h1>SpinBite</h1>
+
+    <p>Bienvenido a la ruleta interactiva. Agrega opciones personalizadas y gira la ruleta para seleccionar una al azar.</p>
+
+    <h3>📋 Instrucciones</h3>
+
+
+        <li>Escribe una opción en el campo de texto.</li>
+        <li>Pulsa <b>Agregar</b> para incluirla en la ruleta.</li>
+        <li>Agrega todas las opciones que desees.</li>
+        <li>Pulsa <b>🎲 GIRAR</b>.</li>
+        <li>La ruleta elegirá una opción al azar.</li>
+  
+</div>
 
 <div class="container">
-     <h1> SpinBite</h1>
 
-    Bienvenido a la ruleta interactiva. Agrega opciones personalizadas y gira la ruleta para seleccionar una al azar.
-
-    <h3>  📋 Instrucciones</h3>
-
-    <li>1. Escribe una opción en el campo de texto.</li>
-
-    <li>2. Pulsa <b>Agregar</b> para incluirla en la ruleta.</li>
-
-    <li>3. Agrega todas las opciones que desees.</li>
-    <li>4. Pulsa <b>🎲 GIRAR</b>.</li>
-    <li>5. La ruleta elegirá una opción al azar.</li>
-    </ol>
     <div style="position:relative">
-
-        
         <canvas id="wheel" width="500" height="500"></canvas>
     </div>
-   
+
     <div class="controls">
 
         <h2>Opciones</h2>
@@ -37,25 +41,22 @@
         <button class="add" onclick="addOption()">Agregar</button>
 
         <button class="remove" onclick="removeOption()">Eliminar última</button>
-        
+
         <button onclick="removeAllOptions()">🗑️ Eliminar todas</button>
-        
-        <button class="spin" onclick="spin()">🎲 GIRAR</button>
+
+        <button class="spin-btn" onclick="spin()">🎲 GIRAR</button>
 
         <h3>Lista</h3>
 
         <ul id="list"></ul>
 
         <h2 id="winner"></h2>
-     <body style="background-color: #0D1B2A; color:white;"></body>
-
-    </div>
-
-</div>
 
     </div>
 
 </div>
 
 <script src="script.js"></script>
+</body>
+</html>
 
