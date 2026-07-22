@@ -57,8 +57,11 @@ ctx.translate(textX, textY);
 
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
-ctx.fillStyle = "wite";
+ctx.fillStyle = "white";
+ctx.lineWidth = 2;
 ctx.font = "bold 24px Arial";
+
+ctx.strokeText(options[i], 0, 0);
 
 ctx.fillText(options[i], 0, 0);
 
@@ -80,7 +83,9 @@ ctx.restore();
 
     ctx.fillStyle = "purple";
     ctx.fill();
-
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.stroke();
 
     updateList();
 }
@@ -128,10 +133,11 @@ function removeOption(){
 function removeAllOptions(){
     options = [];
     drawWheel();
-
+    }
     document.getElementById("winner").innerHTML =
         "TU RETO SERÁ:";
-}
+
+
 function spin(){
 
     if(spinning) return;
