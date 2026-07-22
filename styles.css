@@ -1,6 +1,6 @@
 body{
     margin:0;
-    background:#031a76;
+    background:#1e1e2f;
     color:white;
     font-family:Arial;
     min-height:100vh;
@@ -34,10 +34,40 @@ canvas{
     background:white;
     border-radius:50%;
     box-shadow:0 0 20px rgba(0,0,0,.5);
+    width:100%;
+    height:auto;
+    max-width:500px;
+    display:block;
 }
 
 .controls{
     width:300px;
+    max-width:100%;
+}
+
+@media (max-width: 600px){
+    body{
+        padding:10px;
+    }
+
+    .container{
+        flex-direction:column;
+        gap:20px;
+        width:100%;
+    }
+
+    .header, .controls{
+        width:100%;
+    }
+
+    canvas{
+        max-width:min(90vw, 350px);
+    }
+
+    .spin-btn{
+        font-size:24px;
+        padding:14px 20px;
+    }
 }
 
 input{
@@ -96,3 +126,4 @@ li{
 .spin-btn:hover{
     transform: scale(1.08);
 }
+ 
