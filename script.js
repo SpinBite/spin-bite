@@ -57,7 +57,7 @@ ctx.translate(textX, textY);
 
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
-ctx.fillStyle = "black";
+ctx.fillStyle = "wite";
 ctx.font = "bold 24px Arial";
 
 ctx.fillText(options[i], 0, 0);
