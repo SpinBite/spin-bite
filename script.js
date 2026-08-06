@@ -12,11 +12,6 @@ const colors = [
 "#930a8f",
 "#c0cd17",
 "#cf5781",
-"#ac4816",
-"#9b691e",
-"#855e84",
-"#0c125d",
-"#669449"
 ];
 
 function wrapText(text, maxWidth){
