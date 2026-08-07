@@ -8,10 +8,10 @@ let spinning = false;
 
 const colors = [
 "#a82424",
-"#184d85",
-"#930a8f",
-"#c0cd17",
-"#cf5781",
+"#1900ff",
+"#8a039c",
+"#f2ff00",
+"#f6009c",
 ];
 
 function wrapText(text, maxWidth){
