@@ -1,7 +1,13 @@
 const canvas = document.getElementById("wheel");
 const ctx = canvas.getContext("2d");
 
-let options = [ ];
+let options = [ 
+    "Imita a un mono 10 segundos 🐵",
+    "Mantente en un solo pie durante 15 segundos 🦵🏼",
+    "Dí una verdad incomoda 🤐",
+    "Gira sobre ti mismo 10 veces 😵‍💫",
+    "cumple lo que te diga la proxima persona 😈",
+];
 
 let rotation = 0;
 let spinning = false;
@@ -147,6 +153,11 @@ function addOption(){
     const input = document.getElementById("option");
 
     if(input.value.trim() === ""){
+        return;
+    }
+
+    if(options.length >= 5){
+        alert("Solo puedes agregar un máximo de 5 opciones.");
         return;
     }
 
