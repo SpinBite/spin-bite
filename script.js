@@ -2,11 +2,11 @@ const canvas = document.getElementById("wheel");
 const ctx = canvas.getContext("2d");
 
 let options = [ 
-    "Imita a un mono 10 segundos 🐵",
-    "Mantente en un solo pie durante 15 segundos 🦵🏼",
-    "Dí una verdad incomoda 🤐",
-    "Gira sobre ti mismo 10 veces 😵‍💫",
-    "cumple lo que te diga la proxima persona 😈",
+    "Imitar a un mono 10 segundos 🐵",
+    "Mantener en un solo pie durante 15 segundos 🦵🏼",
+    "Decir una verdad incomoda 🤐",
+    "Girar sobre ti mismo 10 veces 😵‍💫",
+    "cumplir lo que te diga la proxima persona 😈",
 ];
 
 let rotation = 0;
@@ -170,7 +170,7 @@ function addOption(){
 
 function removeOption(){
 
-    if(options.length > 2){
+    if(options.length > 0){
 
         options.pop();
 
